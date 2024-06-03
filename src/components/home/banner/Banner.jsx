@@ -16,7 +16,7 @@ const Banner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 3000); // Change slide every 3 seconds
+    }, 4000); // Change slide every 3 seconds
 
     return () => clearInterval(interval);
   }, [slides.length]);

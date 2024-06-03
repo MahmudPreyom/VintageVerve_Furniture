@@ -1,3 +1,7 @@
+import ch1 from "../../../../assets/c-1.jpg"
+import ch2 from "../../../../assets/c-2.jpg"
+import ch3 from "../../../../assets/ch3a.jpeg"
+import ch4 from "../../../../assets/ch-4.jpg"
 
 const ChairDesign = () => {
     return (
@@ -7,25 +11,25 @@ const ChairDesign = () => {
                 <div>
                     <div className="grid grid-cols-2 gap-3">
                         <div className="card rounded-none bg-base-100 shadow-xl">
-                            <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                            <figure><img src={ch1} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <p>If a dog chews shoes whose shoes does he choose?</p>
                             </div>
                         </div>
                         <div className="card rounded-none bg-base-100 shadow-xl">
-                            <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                            <figure><img src={ch2} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <p>If a dog chews shoes whose shoes does he choose?</p>
                             </div>
                         </div>
                         <div className="card rounded-none bg-base-100 shadow-xl">
-                            <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                            <figure><img src={ch3} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <p>If a dog chews shoes whose shoes does he choose?</p>
                             </div>
                         </div>
                         <div className="card rounded-none bg-base-100 shadow-xl">
-                            <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                            <figure><img src={ch4} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <p>If a dog chews shoes whose shoes does he choose?</p>
                             </div>
