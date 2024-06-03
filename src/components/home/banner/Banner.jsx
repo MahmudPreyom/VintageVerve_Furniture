@@ -5,11 +5,12 @@ const Banner = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
-    { url: 'https://via.placeholder.com/800x400?text=Slide+1', text: 'Slide 1' },
-    { url: 'https://via.placeholder.com/800x400?text=Slide+2', text: 'Slide 2' },
-    { url: 'https://via.placeholder.com/800x400?text=Slide+3', text: 'Slide 3' },
-    { url: 'https://via.placeholder.com/800x400?text=Slide+4', text: 'Slide 4' },
-    { url: 'https://via.placeholder.com/800x400?text=Slide+5', text: 'Slide 5' },
+    { url: 'https://i.ibb.co/Z1zjJWM/slid-5.jpg', text: 'Slide 1' },
+    { url: 'https://i.ibb.co/6smxN67/sli-2o.jpg', text: 'Slide 2' },
+    { url: 'https://i.ibb.co/pvY7nc0/slide-3.jpg', text: 'Slide 3' },
+    { url: 'https://i.ibb.co/QNwcvqt/slide-4.jpg', text: 'Slide 4' },
+    { url: 'https://i.ibb.co/qM6K0zy/slide-1.jpg', text: 'Slide 5' },
+    // { url: '', text: 'Slide 5' },
   ];
 
   useEffect(() => {

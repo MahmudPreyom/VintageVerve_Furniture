@@ -1,22 +1,23 @@
 import { Link } from "react-router-dom";
+import pic from "../assets/unnamed.png"
 
 
 const Navbar = () => {
 
     const navOption = <>
-        <li><Link to={'/'}>Home</Link></li>
-        <li><Link to={'/featureds'}>Featureds</Link></li>
-        <li><Link to={'/shop'}>Shop</Link></li>
-        <li><Link to={'/blog'}>Blog</Link></li>
-        <li><Link to={'/dashboard'}>Dashboard</Link></li>
-        <li><Link to={'/aboutus'}>About Us</Link></li>
-        <li><Link to={'/contact'}>Contact</Link></li>
-        <li><Link to={'/login'} className="btn btn-info">Log In</Link></li>
-        <li><Link to={'/register'} className="btn btn-info">Register</Link></li>
+        <li className="font-bold"><Link to={'/'}>Home</Link></li>
+        <li className="font-bold"><Link to={'/featureds'}>Featureds</Link></li>
+        <li className="font-bold"><Link to={'/shop'}>Shop</Link></li>
+        <li className="font-bold"><Link to={'/blog'}>Blog</Link></li>
+        <li className="font-bold"><Link to={'/dashboard'}>Dashboard</Link></li>
+        <li className="font-bold"><Link to={'/aboutus'}>About Us</Link></li>
+        <li className="font-bold"><Link to={'/contact'}>Contact</Link></li>
+        <li className="font-bold"><Link to={'/login'} className="btn btn-info">Log In</Link></li>
+        <li className="font-bold"><Link to={'/register'} className="btn btn-info">Register</Link></li>
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-yellow-200">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,7 +27,7 @@ const Navbar = () => {
                         {navOption}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <img className="w-[50px] h-[50px] rounded-full" src={pic} alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
