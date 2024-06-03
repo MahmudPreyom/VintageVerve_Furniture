@@ -53,7 +53,7 @@ const Tab = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container md:mx-auto lg:mx-auto px-4 py-8">
             <div className="flex justify-center mb-8">
                 {['SOFAS', 'WOOD CHAIR', 'COFFEE TABLES', 'BEDROOM FURNITURE'].map((category) => (
                     <button
