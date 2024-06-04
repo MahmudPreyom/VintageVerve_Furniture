@@ -12,8 +12,7 @@ const Navbar = () => {
         <li className="font-bold"><Link to={'/dashboard'}>Dashboard</Link></li>
         <li className="font-bold"><Link to={'/aboutus'}>About Us</Link></li>
         <li className="font-bold"><Link to={'/contact'}>Contact</Link></li>
-        <li className="font-bold"><Link to={'/login'} className="btn btn-info">Log In</Link></li>
-        <li className="font-bold"><Link to={'/register'} className="btn btn-info">Register</Link></li>
+
     </>
 
     return (
@@ -25,18 +24,23 @@ const Navbar = () => {
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         {navOption}
+                        <li className="font-bold"><Link to={'/login'} className="btn btn-outline btn-accent">Log In</Link></li>
+                        <li className="font-bold"><Link to={'/register'} className="btn btn-outline btn-warning">Register</Link></li>
                     </ul>
                 </div>
                 <img className="w-[50px] h-[50px] rounded-full" src={pic} alt="" />
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-center hidden lg:flex justify-evenly">
                 <ul className="menu menu-horizontal px-1">
                     {navOption}
                 </ul>
+                <ul className="flex gap-4">
+                    <li className="font-bold"><Link to={'/login'} className="btn btn-accent">Log In</Link></li>
+                    <li className="font-bold"><Link to={'/register'} className="btn btn-warning">Register</Link></li>
+                </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
-            </div>
+            {/* <div className="navbar-end">
+            </div> */}
         </div>
     );
 };

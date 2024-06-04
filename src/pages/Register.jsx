@@ -1,5 +1,40 @@
+import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
+
+
 
 const Register = () => {
+  const [passMatch, setPassMatch] = useState(true);
+  const { createUser, user } = useAuth();
+  // const { createUser, user } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location?.state?.from?.pathname || "/";
+
+  const handleSUbmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    const confirm_password = form.confirm_password.value;
+
+    if (password !== confirm_password) {
+      setPassMatch(false);
+    }
+
+    console.log(email, password, confirm_password);
+
+    if (password === confirm_password) {
+      createUser(email, password);
+      if (user) {
+        navigate(from);
+      }
+    }
+  };
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
@@ -12,23 +47,8 @@ const Register = () => {
             </a>
           </p>
         </div>
-        <form className="mt-8 space-y-6" action="#" method="POST">
-          <input type="hidden" name="remember" defaultValue="true" />
+        <form onSubmit={handleSUbmit} className="mt-8 space-y-6">
           <div className="rounded-md shadow-sm -space-y-px">
-            <div>
-              <label htmlFor="name" className="sr-only">
-                Full Name
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                autoComplete="name"
-                required
-                className="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Full Name"
-              />
-            </div>
             <div>
               <label htmlFor="email-address" className="sr-only">
                 Email address
@@ -37,9 +57,8 @@ const Register = () => {
                 id="email-address"
                 name="email"
                 type="email"
-                autoComplete="email"
                 required
-                className="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                className="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Email address"
               />
             </div>
@@ -51,41 +70,41 @@ const Register = () => {
                 id="password"
                 name="password"
                 type="password"
-                autoComplete="new-password"
                 required
-                className="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                className="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Password"
               />
             </div>
-          </div>
-
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <input
-                id="terms"
-                name="terms"
-                type="checkbox"
-                className="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-              />
-              <label htmlFor="terms" className="block ml-2 text-sm text-gray-900">
-                I agree to the{' '}
-                <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                  terms and conditions
-                </a>
+            <div>
+              <label htmlFor="retype-password" className="sr-only">
+                Retype Password
               </label>
+              <input
+                id="retype-password"
+                name="retype-password"
+                type="password"
+                required
+                className="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                placeholder="Retype Password"
+              />
             </div>
           </div>
-
           <div>
             <button
               type="submit"
               className="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            >
-              Register
+              value="Register"
+            >Register
             </button>
           </div>
         </form>
-
+        <div>
+          {!passMatch && (
+            <div className="my-2">
+              <p className="text-red-500">Passwords do not match!</p>
+            </div>
+          )}
+        </div>
         <div className="mt-6">
           <button
             type="button"

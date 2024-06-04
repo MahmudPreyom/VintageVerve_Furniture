@@ -5,11 +5,11 @@ const Banner = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
-    { url: 'https://i.ibb.co/Z1zjJWM/slid-5.jpg', text: 'Slide 1' },
-    { url: 'https://i.ibb.co/6smxN67/sli-2o.jpg', text: 'Slide 2' },
-    { url: 'https://i.ibb.co/pvY7nc0/slide-3.jpg', text: 'Slide 3' },
-    { url: 'https://i.ibb.co/QNwcvqt/slide-4.jpg', text: 'Slide 4' },
-    { url: 'https://i.ibb.co/qM6K0zy/slide-1.jpg', text: 'Slide 5' },
+    { url: 'https://i.ibb.co/Z1zjJWM/slid-5.jpg', text: <div className='grid justify-items-center'><h1 className='text-7xl font-bold'>VINTAGE</h1> <br /><p className='text-xs font-normal tracking-wide'>NEW COLLECTION FOR SPRING 2016</p> <br /> <button className='btn btn-outline btn-warning w-28'>VIEW MORE</button></div> },
+    { url: 'https://i.ibb.co/6smxN67/sli-2o.jpg', text: <div className='grid justify-items-center'><h1 className='text-7xl font-bold'>VINTAGE</h1> <br /><p className='text-xs font-normal tracking-wide'>NEW COLLECTION FOR SPRING 2016</p> <br /> <button className='btn btn-outline btn-warning w-28'>VIEW MORE</button></div> },
+    { url: 'https://i.ibb.co/pvY7nc0/slide-3.jpg', text: <div className='grid justify-items-center'><h1 className='text-7xl font-bold'>VINTAGE</h1> <br /><p className='text-xs font-normal tracking-wide'>NEW COLLECTION FOR SPRING 2016</p> <br /> <button className='btn btn-outline btn-warning w-28'>VIEW MORE</button></div> },
+    { url: 'https://i.ibb.co/QNwcvqt/slide-4.jpg', text: <div className='grid justify-items-center'><h1 className='text-7xl font-bold'>VINTAGE</h1> <br /><p className='text-xs font-normal tracking-wide'>NEW COLLECTION FOR SPRING 2016</p> <br /> <button className='btn btn-outline btn-warning w-28'>VIEW MORE</button></div> },
+    { url: 'https://i.ibb.co/qM6K0zy/slide-1.jpg', text: <div className='grid justify-items-center'><h1 className='text-7xl font-bold'>VINTAGE</h1> <br /><p className='text-xs font-normal tracking-wide'>NEW COLLECTION FOR SPRING 2016</p> <br /> <button className='btn btn-outline btn-warning w-28'>VIEW MORE</button></div> },
     // { url: '', text: 'Slide 5' },
   ];
 
