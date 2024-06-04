@@ -1,7 +1,7 @@
-import ch1 from "../../../../assets/c-1.jpg"
-import ch2 from "../../../../assets/c-2.jpg"
-import ch3 from "../../../../assets/ch3a.jpeg"
-import ch4 from "../../../../assets/ch-4.jpg"
+import ch1 from "../../../../assets/rsz_c1.jpg"
+import ch2 from "../../../../assets/rsz_c1.jpg"
+import ch3 from "../../../../assets/rsz_ch3a.jpg"
+import ch4 from "../../../../assets/rsz_ch-4.jpg"
 
 const ChairDesign = () => {
     return (
@@ -10,28 +10,28 @@ const ChairDesign = () => {
                 
                 <div>
                     <div className="grid grid-cols-2 gap-3">
-                        <div className="card rounded-none bg-base-100 shadow-xl">
-                            <figure><img src={ch1} alt="Shoes" /></figure>
+                        <div className="card rounded-none bg-base-100 shadow-xl h-[280px]">
+                            <figure><img className="" src={ch1} alt="" /></figure>
                             <div className="card-body">
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
+                                <p className="text-xl font-semibold">Eames Chair</p>
                             </div>
                         </div>
-                        <div className="card rounded-none bg-base-100 shadow-xl">
-                            <figure><img src={ch2} alt="Shoes" /></figure>
+                        <div className="card rounded-none bg-base-100 shadow-xl h-[280px]">
+                            <figure><img className="" src={ch2} alt="Shoes" /></figure>
                             <div className="card-body">
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
+                                <p className="text-xl font-semibold">Rocking Chair</p>
                             </div>
                         </div>
-                        <div className="card rounded-none bg-base-100 shadow-xl">
-                            <figure><img src={ch3} alt="Shoes" /></figure>
+                        <div className="card rounded-none bg-base-100 shadow-xl h-[280px]">
+                            <figure><img className="" src={ch3} alt="Shoes" /></figure>
                             <div className="card-body">
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
+                                <p className="text-xl font-semibold">Adirondack Chair</p>
                             </div>
                         </div>
-                        <div className="card rounded-none bg-base-100 shadow-xl">
-                            <figure><img src={ch4} alt="Shoes" /></figure>
+                        <div className="card rounded-none bg-base-100 shadow-xl h-[280px]">
+                            <figure><img className="" src={ch4} alt="Shoes" /></figure>
                             <div className="card-body">
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
+                                <p className="text-xl font-semibold">Wingback Chair</p>
                             </div>
                         </div>
                     </div>

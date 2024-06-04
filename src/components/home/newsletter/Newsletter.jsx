@@ -1,13 +1,13 @@
+/* eslint-disable react/no-unescaped-entities */
 
 const Newsletter = () => {
     return (
-        <div className="hero h-80" style={{ backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)' }}>
-            <div className="hero-overlay bg-opacity-60"></div>
-            <div className="hero-content text-center text-neutral-content">
+        <div className="hero h-80" style={{ backgroundImage: 'url(https://i.ibb.co/jzvT7Cr/nl.jpg)' }}>
+            <div className="hero-overlay bg-opacity-25"></div>
+            <div className="hero-content text-center">
                 <div className="max-w-md">
-                    <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                    <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button className="btn btn-primary">Get Started</button>
+                    <h1 className="mb-5 text-5xl font-bold">NEWS LETTER</h1>
+                    <p className="mb-5">Step inside for a look at the latest trends from legendary furniture makers, plus exclusive discounts you won't want to miss.</p>
                 </div>
             </div>
         </div>
