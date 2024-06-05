@@ -81,8 +81,7 @@ const Register = () => {
                 Retype Password
               </label>
               <input
-                id="retype-password"
-                name="retype-password"
+                name="confirm_password"
                 type="password"
                 required
                 className="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"

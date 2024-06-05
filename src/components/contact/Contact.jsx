@@ -3,10 +3,10 @@ import { FaFacebook, FaTelegram, FaVoicemail, FaWhatsapp } from "react-icons/fa"
 function Contact() {
   return (
     <div>
-      <div className="hero min-h-screen bg-orange-100">
+      <div className="hero min-h-screen bg-orange-300">
         <div className="hero-content flex-col lg:flex-row">
           <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" />
-          <div className=" bg-orange-300 p-4 rounded">
+          <div className=" bg-orange-200 p-4 rounded">
             <h1 className="text-5xl font-bold">Contact Us</h1>
             <p className="py-6">You can email us to know about our furniture or contact us to know any other information through these links.</p>
             <div className="grid grid-cols-2 gap-4">
