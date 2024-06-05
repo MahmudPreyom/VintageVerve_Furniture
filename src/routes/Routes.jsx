@@ -4,7 +4,6 @@ import ErrorPage from "../pages/ErrorPage";
 import Home from "../components/home/Home";
 import Featureds from "../components/featureds/Featureds";
 import Shop from "../components/shop/Shop";
-import Blog from "../components/blog/Blog";
 import Aboutus from "../components/aboutus/Aboutus";
 import Contact from "../components/contact/Contact";
 import Login from "../pages/Login";
@@ -27,10 +26,6 @@ export const router = createBrowserRouter([
         {
           path: '/shop',
           element: <Shop />
-        },
-        {
-          path: '/blog',
-          element: <Blog/>
         },
         {
           path: '/aboutus',

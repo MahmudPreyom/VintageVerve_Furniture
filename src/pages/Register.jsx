@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
+import { AuthContext } from "../authprovider/AuthProvider";
+// import useAuth from "../hooks/useAuth";
 
 
 
 const Register = () => {
   const [passMatch, setPassMatch] = useState(true);
-  const { createUser, user } = useAuth();
-  // const { createUser, user } = useContext(AuthContext);
+  // const { createUser, user } = useAuth();
+  const { createUser, user} = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
